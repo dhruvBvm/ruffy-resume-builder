@@ -1,0 +1,46 @@
+.skill {
+    margin-bottom: var(--space-xxs);
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        padding: var(--space-tiny) var(--space-xs);
+    }
+
+    &__circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    &__field {
+        font-family: var(--calibri);
+        font-size: var(--font-lg);
+        font-weight: 800;
+    }
+
+    &__name {
+        display: flex;
+        gap: var(--space-xxs);
+
+        span {
+            font-family: var(--calibri);
+            font-size: var(--font-lg);
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+    }
+
+     &__summary {
+        margin-top: var(--space-xs);
+        font-family: var(--calibri);
+        font-size: var(--font-md);
+        line-height: 1.4;
+        padding: 0 var(--space-xl);
+        font-weight: 400;
+         word-wrap: break-word;
+    }
+    
+}

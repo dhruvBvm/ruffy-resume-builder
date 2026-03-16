@@ -1,0 +1,103 @@
+.resume_page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--space-lg);
+
+    &__card {
+        width: 100%;
+        max-width: 1000px;
+        background-color: var(--white);
+        // margin: 0 auto;
+        // aspect-ratio: 1/1.414;
+        color: var(--bg-color);
+        padding: var(--space-lg);
+        font-size: var(--font-sm);
+        font-family: var(--calibri);
+    }
+
+    a,
+    span {
+        font-family: var(--calibri);
+        font-weight: 800;
+        font-size: var(--font-sm);
+    }
+
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xs);
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: var(--font-xxl);
+
+        span {
+            font-size: var(--font-ginat);
+        }
+    }
+
+    &__header.second {
+        font-size: var(--font-xl);
+    }
+
+    &__contacts {
+        font-size: var(--font-sm);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xs);
+        margin-top: var(--space-xs);
+        text-transform: capitalize;
+
+        .email {
+            text-transform: lowercase;
+        }
+    }
+
+    &__summary {
+        p {
+            margin-top: var(--space-lg);
+            font-family: var(--calibri);
+            font-size: var(--font-md);
+            font-weight: 500;
+            line-height: 1.2;
+            word-wrap: break-word;
+        }
+    }
+
+    &__education {
+        margin-bottom: var(--space-lg);
+    }
+
+    .section-header {
+        font-size: var(--font-xl);
+        margin: var(--space-sm) 0;
+        font-family: var(--roboto-bold);
+    }
+
+    .section {
+        margin: var(--space-lg) 0;
+    }
+
+    a {
+        color: var(--bg-color);
+        text-decoration: underline;
+    }
+
+    .button {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: var(--space-lg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xs);
+        flex-wrap: wrap;
+        max-width: 200px;
+    }
+}

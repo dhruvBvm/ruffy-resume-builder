@@ -1,0 +1,38 @@
+@use './../../../../../Styles/index.scss' as *;
+
+.personal-details {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: var(--space-lg) 0;
+    flex: 1;
+    gap: var(--space-xs);
+
+    @include mobile {
+        padding: var(--space-sm) 0;
+    }
+
+    @include smallDevice {
+        padding: var(--space-xs) 0;
+    }
+
+
+    h1 {
+        font-size: var(--font-lg);
+    }
+
+    p {
+        width: 55%;
+        // text-align: center;
+
+        @include mobile {
+            width: 85%;
+        }
+    }
+
+
+    &__policy {
+        color: var(--green);
+    }
+}

@@ -1,0 +1,121 @@
+    .user-resumes__recent-resumes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: var(--space-lg) 0;
+        gap: var(--space-lg);
+        align-items: stretch;
+        overflow: hidden;
+        cursor: pointer;
+
+        &__card {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: var(--space-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            flex-direction: column;
+            background-color: var(--hover-color);
+            position: relative;
+
+
+
+            .image-div {
+                width: 100%;
+                height: 30vh;
+                border-radius: 5px;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    // object-fit: cover;   
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .infos {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .username {
+                    opacity: .8;
+                    font-size: var(--space-md);
+                }
+            }
+
+            h2 {
+                margin-top: var(--space-sm);
+                font-size: var(--font-lg);
+            }
+
+            .status {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: var(--space-xs);
+            }
+
+            h4 {
+                font-size: var(--font-sm);
+                opacity: .8;
+            }
+
+            .progress {
+                margin-top: var(--space-sm);
+
+                .progress__bar {
+                    width: 100%;
+                    height: 6px;
+                    border-radius: 5px;
+                    margin: var(--space-sm) 0;
+
+                    .bar {
+                        height: 100%;
+                        background-color: green;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: var(--space-xs);
+                width: 100%;
+                margin-top: var(--space-sm);
+
+                .extra-actions {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(--space-xs);
+                    height: 100%;
+
+                    button {
+                        padding: var(--space-xs);
+                        height: 100%;
+                        aspect-ratio: 1/1;
+                        background-color: var(--third-bg);
+                        border: 1px solid var(--border);
+                        border-radius: 5px;
+                        color: var(--white);
+                    }
+                }
+                
+                button {
+                    border-radius: 5px;
+                    padding: var(--space-xs);
+                }
+            }
+
+        }
+    }

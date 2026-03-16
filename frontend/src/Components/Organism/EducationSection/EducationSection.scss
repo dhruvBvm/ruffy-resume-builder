@@ -1,0 +1,40 @@
+.education {
+    margin: var(--space-xs) 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .degree-name,
+        .timeline {
+            font-family: var(--calibri);
+            font-size: var(--font-lg);
+            font-weight: 800;
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: var(--space-lg);
+
+        .college-name,
+        .college-cgpa {
+            font-family: var(--calibri);
+            font-size: var(--font-md);
+            font-weight: 600;
+        }
+
+
+    }
+
+    &__summary {
+        p {
+            margin-top: var(--space-lg);
+            font-family: var(--roboto-black);
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+    }
+}

@@ -1,0 +1,38 @@
+.login-page__form {
+    width: 100%;
+    padding: var(--space-lg) 0;
+
+    .form__input {
+        font-size: var(--font-lg);
+        margin: var(--space-sm) 0;
+    }
+
+    .extra__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-lg) 0;
+
+        span {
+            font-size: var(--font-md);
+        }
+
+    }
+
+
+    a {
+        font-size: var(--font-sm);
+        color: var(--green);
+        transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    button {
+        width: 100%;
+        margin: var(--space-lg) 0;
+    }
+}

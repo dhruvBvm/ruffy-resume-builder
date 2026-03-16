@@ -1,0 +1,146 @@
+@use '../../../Styles/index.scss' as *;
+
+.templates {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 8vh;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    &__cards {
+        width: 100%;
+        padding: var(--space-giant) var(--space-lg);
+        display: grid;
+        gap: var(--space-lg);
+        place-content: center;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include smallDevice {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
+        &__card {
+            width: 100%;
+            overflow: hidden;
+            padding: var(--space-md);
+            background-color: var(--light-bg);
+            border-radius: 5px;
+            background-color: #17181f;
+            border: 2px solid var(--border);
+
+
+            .image__div {
+                width: 100%;
+                overflow: hidden;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 100%;
+                }
+            }
+
+            .card__details {
+                width: 100%;
+                padding: var(--space-xs) 0 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                h2 {
+                    font-size: var(--font-xl);
+
+                    @include tablet {
+                        font-size: var(--font-lg);
+                    }
+
+                    @include mobile {
+                        font-size: var(--font-sm);
+                    }
+                }
+
+                p {
+                    font-size: var(--font-md);
+                    opacity: .7;
+
+                    @include tablet {
+                        font-size: var(--font-sm);
+                    }
+
+                    @include mobile {
+                        font-size: var(--font-xs);
+                    }
+                }
+            }
+
+            .card__info {
+                display: flex;
+                justify-content: space-between;
+                margin-top: var(--space-sm);
+                gap: var(--space-sm);
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: left;
+                    flex-direction: column-reverse;
+                }
+
+                .card__avilables {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(--space-xs);
+
+                    @include mobile {
+                        justify-content: flex-start;
+
+                    }
+
+
+
+                    span {
+                        padding: var(--space-xs) var(--space-sm);
+                        border-radius: 5px;
+                        background-color: var(--light-bg);
+                        border: 1px solid var(--border);
+                        cursor: pointer;
+                        opacity: .5;
+                        font-size: var(--font-xxs);
+                        text-transform: uppercase;
+
+                        @include mobile {
+                            font-size: var(--font-tiny);
+                        }
+                    }
+
+                }
+
+                .btn {
+                    // background-color: var(--light-bg);
+                    border: 1px solid var(--border);
+
+                    @include tablet {
+                        font-size: var(--font-xs);
+                    }
+
+                }
+            }
+        }
+    }
+}

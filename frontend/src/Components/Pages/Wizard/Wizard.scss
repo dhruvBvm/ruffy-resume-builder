@@ -1,0 +1,19 @@
+@use './../../../Styles/index.scss' as *;
+
+.wizard {
+    width: 100%;
+    // min-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    padding-top: 8vh;
+    position: relative;
+
+    @include mobile {
+        padding: var(--space-sm);
+        padding-top: 8vh;
+    }
+}

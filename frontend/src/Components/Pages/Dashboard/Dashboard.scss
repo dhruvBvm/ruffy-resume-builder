@@ -1,0 +1,46 @@
+.dashboard {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-bg);
+    overflow-y: hidden;
+
+    h1 {
+        font-size: 55px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        padding: var(--space-sm);
+        gap: var(--space-lg);
+        overflow: hidden;
+    }
+
+    &__content {
+        flex: 1;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        border-radius: 10px;
+        min-height: 0;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    &__content::-webkit-scrollbar{
+        display: none;
+    }
+
+    &__outlet__wrapper{
+        width: 100%;
+        padding: var(--space-lg);
+        display: flex;
+        flex:1;
+    }
+}

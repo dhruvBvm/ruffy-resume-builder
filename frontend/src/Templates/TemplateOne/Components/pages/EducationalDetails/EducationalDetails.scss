@@ -1,0 +1,57 @@
+@use './../../../../../Styles/index.scss' as *;
+
+.educational-details {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: var(--space-lg) 0;
+    flex: 1;
+    gap: var(--space-xs);
+
+    @include mobile {
+        padding: var(--space-sm) 0;
+    }
+
+    @include smallDevice {
+        padding: var(--space-xs) 0;
+    }
+
+
+    h1 {
+        font-size: var(--font-lg) 0;
+    }
+
+    p {
+        width: 55%;
+
+        @include mobile {
+            width: 85%;
+        }
+    }
+
+    &__policy {
+        color: var(--green);
+    }
+
+    button {
+        margin-top: var(--space-lg);
+        background-color: var(--secondary-bg);
+        color: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 5px;
+
+    }
+
+    .educations-limit {
+        background-color: var(--secondary-bg);
+        padding: var(--space-sm);
+        width: fit-content;
+        margin-top: var(--space-lg);
+        border-radius: 5px;
+        border: 1px solid var(--border);
+        opacity: .8;
+        cursor:not-allowed;
+    }
+
+}

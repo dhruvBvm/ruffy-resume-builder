@@ -1,0 +1,57 @@
+.users-table {
+    width: 100%;
+    overflow-y: auto;
+    margin: var(--space-lg) 0;
+
+    h2{
+        font-size: var(--font-xl);
+        padding: var(--space-md) 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: var(--third-bg);
+        text-transform: uppercase;
+        padding: var(--space-xs) var(--space-lg);
+        text-align: center;
+        flex: 1;
+        backdrop-filter: blur(50px);
+    }
+
+    td {
+        flex: 1;
+        padding: var(--space-xs) var(--space-lg);
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    tbody {
+        tr:nth-child(even) {
+            background-color: var(--third-bg);
+        }
+
+        .edited {
+            background-color: green;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xs);
+            width: 100%;
+
+            button {
+                padding: var(--space-xs);
+            }
+        }
+    }
+}

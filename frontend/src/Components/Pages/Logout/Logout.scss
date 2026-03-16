@@ -1,0 +1,26 @@
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-lg);
+    width: 100%;
+    height: 100vh;
+
+    h1{
+        font-size: var(--font-giant);
+    }
+
+    &__actions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xs);
+
+        button{
+            font-size: var(--space-lg);
+            color: black;
+            font-weight: 800;
+        }
+    }
+}

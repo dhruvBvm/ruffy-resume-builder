@@ -1,0 +1,97 @@
+// @use './../../Styles/index.scss' as *;
+@use './../../Styles/Responsive/responsive' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    // border: 1px solid var(--green);      
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-xs);
+
+    @include mobile {
+        font-size: var(--font-xxs);
+    }
+}
+
+button a {
+    color: var(--bg-color);
+}
+
+h1 {
+    font-size: var(--font-xl);
+
+    @include mobile {
+        font-size: var(--font-lg);
+    }
+}
+
+h2 {
+    font-size: var(--font-lg);
+
+    @include mobile {
+        font-size: var(--font-md);
+    }
+}
+
+h3 {
+    font-size: var(--font-md);
+}
+
+h4 {
+    font-size: var(--font-sm);
+}
+
+p {
+    font-size: var(--font-sm);
+
+    @include mobile {
+        font-size: var(--font-xs);
+    }
+}
+
+label {
+    font-size: var(--font-md);
+
+    @include tablet {
+        font-size: var(--font-sm);
+    }
+
+    @include mobile {
+        font-size: var(--font-xs);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

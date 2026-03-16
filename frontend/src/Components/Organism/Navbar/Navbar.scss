@@ -1,0 +1,49 @@
+@use './../../../Styles/index.scss' as *;
+
+.nav {
+    width: 100%;
+    padding: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--bg-color);
+    height: 8vh;
+
+
+    @include mobile {
+        padding: var(--space-sm);
+    }
+
+    @include smallDevice {
+        display: none;
+    }
+
+    &__logo {
+        & h2 {
+            font-size: var(--font-xl);
+            text-transform: uppercase;
+            font-family: var(--lato);
+            cursor: pointer;
+
+            @include tablet {
+                font-size: var(--font-md);
+            }
+
+            @include mobile {
+                font-size: var(--font-sm);
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+}
