@@ -20,7 +20,7 @@ mongoose
 const app = express();
 app.use(
   cors({
-    origin: "https://ruffy-resume-builder.vercel.app/",
+    origin: "https://ruffy-resume-builder.vercel.app",
     credentials: true,
   }),
 );
