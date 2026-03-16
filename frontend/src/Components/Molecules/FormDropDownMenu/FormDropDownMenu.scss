@@ -9,6 +9,14 @@
     position: relative;
     gap: var(--space-xs);
 
+    @include mobile {
+      min-width: 200px;
+    }
+
+    @include smallDevice {
+       
+    }
+
 
     &__label {
         flex: 1;
@@ -33,7 +41,7 @@
         color: var(--text-color);
         accent-color: orange;
         font-size: var(--font-lg);
-        max-width: 350px;
+
 
         @include tablet {
             font-size: var(--font-md);
@@ -53,10 +61,6 @@
         }
     }
 
-    // select,
-    // ::picker(select) {
-    //     appearance: base-select;
-    // }
 
     &__warning {
         position: absolute;

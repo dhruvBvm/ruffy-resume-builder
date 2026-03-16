@@ -16,6 +16,14 @@
     border-radius: 5px;
     transition: all 5s ease-in;
 
+      @include mobile {
+        padding: var(--space-sm);
+    }
+
+    @include smallDevice {
+        padding: var(--space-xs);
+    }
+
     .confirm-details {
         display: flex;
         justify-content: space-between;

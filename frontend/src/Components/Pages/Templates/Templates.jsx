@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Templates.scss";
 import Button from "../../../Components/Molecules/Button/Button";
 
 import { templatesdata } from "../../../Data/templatesData";
+import { AppContext } from "../../../App";
 
 const Templates = () => {
   const navigate = useNavigate();
+  const { state, dispatch } = useContext(AppContext);
 
   return (
     <div className="templates">
@@ -18,7 +20,11 @@ const Templates = () => {
                 key={template.id}
                 className="templates__cards__card"
                 onClick={() => {
-                  navigate("/template-one");
+                  if (state.isAuthenticated) {
+                    navigate("/template-one");
+                    return;
+                  }
+                  navigate("/login");
                 }}
               >
                 <div className="image__div">
@@ -31,7 +37,11 @@ const Templates = () => {
                 <div className="card__info">
                   <Button
                     onClick={() => {
-                      navigate("/template-one");
+                      if (state.isAuthenticated) {
+                        navigate("/template-one");
+                        return;
+                      }
+                      navigate("/login");
                     }}
                   >
                     Use this template

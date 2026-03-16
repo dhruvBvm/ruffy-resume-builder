@@ -1,3 +1,5 @@
+@use '../../../Styles/index.scss' as *;
+
 .resume_page {
     display: flex;
     justify-content: center;
@@ -9,13 +11,25 @@
     &__card {
         width: 100%;
         max-width: 1000px;
+        min-width: 1000px;
         background-color: var(--white);
         // margin: 0 auto;
-        // aspect-ratio: 1/1.414;
+        aspect-ratio: 1/1.414;
         color: var(--bg-color);
         padding: var(--space-lg);
         font-size: var(--font-sm);
         font-family: var(--calibri);
+
+
+        @include tablet {
+            scale: .5;
+            transform-origin: 0% 0%;
+        }
+
+        @include mobile {
+            scale: .4;
+        }
+
     }
 
     a,
@@ -99,5 +113,11 @@
         gap: var(--space-xs);
         flex-wrap: wrap;
         max-width: 200px;
+        z-index: 85;
+
+        @include mobile{
+            top: auto;
+            bottom: 0;
+        }
     }
 }

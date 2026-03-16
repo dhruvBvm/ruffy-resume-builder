@@ -15,11 +15,11 @@
     // flex-direction:  column;
 
     @include mobile {
-        padding: var(--space-sm) 45px;
+        padding: var(--space-sm) ;
     }
 
     @include smallDevice {
-        padding: var(--space-xs) 45px;
+        padding: var(--space-xs);
     }
 
 
@@ -51,7 +51,11 @@
             @include mobile {
                 width: var(--space-lg);
                 height: var(--space-lg);
-                font-size: var(--font-xxs);
+                font-size: var(--font-tiny);
+            }
+            @include smallDevice {
+                width: var(--space-md);
+                height: var(--space-md);
             }
 
         }
@@ -103,6 +107,7 @@
 
             @include tablet {
                 font-size: var(--font-xs);
+                display: none;
             }
 
             @include mobile {

@@ -18,12 +18,12 @@ const SkillsDetailForm = ({ skills }) => {
   const { state, dispatch } = useContext(TemplateOneContext)
 
   const handleRemove = useCallback(
-    (id = skills.id) => {
+    () => {
       dispatch({
         type: 'REMOVE_FORM',
         payload: {
           objectName: 'skillsDetails',
-          id: id,
+          id : skills.id,
         },
       })
     },
@@ -58,7 +58,7 @@ const SkillsDetailForm = ({ skills }) => {
       </div>
       <FormRow>
         <FormInput
-          text={'Skills Category Name'} // e.g. "Frontend Development"
+          text={'Skills Category Name'} 
           htmlFor={'skillFieldName'}
           type={'text'}
           value={skills.skillFieldName}

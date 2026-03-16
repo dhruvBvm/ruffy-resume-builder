@@ -1,3 +1,5 @@
+@use './../../../Styles/index.scss' as *;
+
 .auth-required {
     width: 100%;
     height: 100vh;
@@ -9,6 +11,15 @@
 
     h1 {
         font-size: var(--font-huge);
+        text-align: center;
+
+        @include mobile {
+            font-size: var(--font-lg);
+        }
+
+        @include smallDevice {
+            font-size: var(--font-xs);
+        }
     }
 
     &__actions {
@@ -16,5 +27,9 @@
         justify-content: center;
         align-items: center;
         gap: var(--space-sm);
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 }

@@ -14,15 +14,49 @@
     background-color: var(--secondary-bg);
     border-radius: 5px;
     transition: all 5s ease-in;
+    overflow: hidden;
+
+    @include mobile {
+        padding: var(--space-sm);
+    }
+
+    @include smallDevice {
+        padding: var(--space-xs);
+    }
+
 
 
     .skill-details {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        width: 100%;
 
         .skill-header {
             font-size: var(--font-xxl);
+
+            @include mobile {
+                font-size: var(--font-md);
+            }
+
+            @include smallDevice {
+                font-size: var(--font-xs);
+            }
+        }
+
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+
+
+            @include mobile {
+                font-size: var(--font-xs);
+                padding: var(--space-tiny);
+            }
         }
 
 
@@ -45,6 +79,15 @@
             padding: var(--space-xs) var(--space-lg);
             text-align: center;
             text-transform: capitalize;
+
+            @include mobile {
+                font-size: var(--font-tiny);
+                padding: var(--space-xxs) 1px;
+            }
+
+            @include smallDevice {
+                font-size: var(--font-tiny);
+            }
         }
 
         th {
@@ -53,12 +96,14 @@
         }
 
         tbody {
+
+
             tr:nth-child(even) {
                 background-color: var(--third-bg);
 
             }
 
-            .edited{
+            .edited {
                 background-color: green;
             }
 
@@ -71,6 +116,15 @@
 
                 button {
                     padding: var(--space-xs);
+
+                    @include mobile {
+                        font-size: var(--font-xxs);
+                        padding: var(--space-xxs);
+                    }
+
+                    @include smallDevice {
+                        font-size: var(--font-tiny);
+                    }
                 }
 
             }
@@ -90,6 +144,11 @@
     button {
         margin: 0;
         font-size: var(--font-md);
+
+        @include mobile {
+            font-size: var(--font-xs);
+            padding: var(--space-tiny);
+        }
     }
 
 

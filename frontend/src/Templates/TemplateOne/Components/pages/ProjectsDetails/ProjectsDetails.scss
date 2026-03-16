@@ -9,6 +9,7 @@
     flex: 1;
     gap: var(--space-xs);
 
+
     @include mobile {
         padding: var(--space-sm) 0;
     }

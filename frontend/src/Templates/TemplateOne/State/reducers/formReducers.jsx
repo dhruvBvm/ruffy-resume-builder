@@ -16,6 +16,8 @@ export const addForm = (state, payload) => {
 
 export const removeForm = (state, payload) => {
   const { objectName, id } = payload;
+  console.log(objectName)
+  console.log(id)
   if (!state[objectName]) return state;
   if (state[objectName].length <= 1) return state;
   return {

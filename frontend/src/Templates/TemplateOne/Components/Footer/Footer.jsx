@@ -4,7 +4,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "../../../../Components/Molecules/Button/Button";
 import { TemplateOneContext } from "../../TemplateOne";
 import { useContext } from "react";
-import { handleNavigation } from "../../Utils/handlenavigation";
 import { useNavigate } from "react-router-dom";
 import { config } from "../../State/config";
 import { uploadResumes } from "../../../../utils/resumes/uploadResumes";
@@ -19,11 +18,11 @@ const Footer = ({}) => {
       {state.pageNumber === 1 ? (
         <Button
           onClick={() => {
-            navigate("/templates");
+            navigate("/");
           }}
         >
           <FaArrowLeftLong />
-          <span>Go to the Home Page</span>
+          <span>Home</span>
         </Button>
       ) : (
         <Button
@@ -60,7 +59,7 @@ const Footer = ({}) => {
             }
           }}
         >
-          View Your Resume
+          View Resume
         </Button>
       ) : (
         <Button
@@ -72,7 +71,7 @@ const Footer = ({}) => {
         >
           <span>
             {state.pageNumber === 1
-              ? "Start Building the Resume"
+              ? "Start Building"
               : "Save & Next  "}
           </span>
           <FaArrowRightLong />

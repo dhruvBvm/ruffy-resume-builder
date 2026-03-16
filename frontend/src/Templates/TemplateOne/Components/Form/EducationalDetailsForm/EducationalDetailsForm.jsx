@@ -11,18 +11,15 @@ import { checkArrayErrorStack } from "../../../../../utils/helpers/checkArrayErr
 const EducationalDetailsForm = ({ education }) => {
   const { state, dispatch } = useContext(TemplateOneContext);
 
-  const handleRemove = useCallback(
-    (id = education.id) => {
-      dispatch({
-        type: "REMOVE_FORM",
-        payload: {
-          objectName: "educationalDetails",
-          id: id,
-        },
-      });
-    },
-    [dispatch, education.id],
-  );
+  const handleRemove = useCallback(() => {
+    dispatch({
+      type: "REMOVE_FORM",
+      payload: {
+        objectName: "educationalDetails",
+        id: education.id,
+      },
+    });
+  }, [dispatch, education.id]);
 
   const handleChange = useCallback(
     (e, id = education.id) => {

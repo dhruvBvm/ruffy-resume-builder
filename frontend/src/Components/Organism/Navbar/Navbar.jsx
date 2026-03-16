@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import "./Navbar.scss";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Button from "../../Molecules/Button/Button";
-
+import { AppContext } from "../../../App";
 
 const Navbar = () => {
-  const location = useLocation();
   const navigate = useNavigate();
+  const { state, dispatch } = useContext(AppContext);
   return (
     <nav className="nav">
       <div className="nav__logo">
@@ -19,15 +19,9 @@ const Navbar = () => {
         </h2>
       </div>
       <div className="nav__links">
-        <Button
+        {/* <Button
           onClick={() => {
-            navigate("/template-one", {
-              state: {
-                formData: location.state?.formData
-                  ? { ...location.state.formData }
-                  : null,
-              },
-            });
+            navigate("/template-one");
           }}
         >
           Build Your Template
@@ -38,25 +32,8 @@ const Navbar = () => {
           }}
         >
           See all Templates
-        </Button>
-        {1 === 1   ? (
-          <>
-            <Button
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              Login
-            </Button>
-            <Button
-              onClick={() => {
-                navigate("/register");
-              }}
-            >
-              Register
-            </Button>
-          </>
-        ) : (
+        </Button> */}
+        {state.isAuthenticated ? (
           <>
             <Button
               onClick={() => {
@@ -71,6 +48,23 @@ const Navbar = () => {
               }}
             >
               Logout
+            </Button>
+          </>
+        ) : (
+          <>
+            <Button
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
+              Login
+            </Button>
+            <Button
+              onClick={() => {
+                navigate("/register");
+              }}
+            >
+              Register
             </Button>
           </>
         )}

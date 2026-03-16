@@ -20,9 +20,37 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        width: 100%;
 
         .collage-header {
             font-size: var(--font-xxl);
+
+
+            @include mobile {
+                font-size: var(--font-md);
+            }
+            @include smallDevice {
+                font-size: var(--font-xs);
+            }
         }
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+
+
+            @include mobile {
+                font-size: var(--font-xs);
+                padding: var(--space-tiny);
+            }
+        }
+    }
+
+
+    @include mobile {
+        padding: var(--space-xs);
     }
 }

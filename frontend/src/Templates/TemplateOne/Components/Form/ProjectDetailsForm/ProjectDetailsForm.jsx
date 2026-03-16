@@ -16,12 +16,12 @@ const ProjectDetailsForm = ({ project }) => {
   const { state, dispatch } = useContext(TemplateOneContext)
 
   const handleRemove = useCallback(
-    (id = project.id) => {
+    () => {
       dispatch({
         type: 'REMOVE_FORM',
         payload: {
           objectName: 'projectsDetails',
-          id: id,
+          id : project.id,
         },
       })
     },
