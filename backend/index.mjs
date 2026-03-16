@@ -9,9 +9,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 mongoose
-  .connect(
-    process.env.MONGO_URI,
-  )
+  .connect(process.env.MONGO_URI)
   .then((result) => {
     console.log("Connected to MONGODB server");
   })
@@ -22,7 +20,7 @@ mongoose
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://ruffy-resume-builder.vercel.app/",
     credentials: true,
   }),
 );
@@ -39,6 +37,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port number ${PORT}`);
 });
-
-
-
