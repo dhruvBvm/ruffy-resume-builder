@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect } from "react";
 
-import "./logout.scss";
+import "./Logout.scss";
 import Button from "../../Molecules/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../../../utils/logout/logoutUser";
