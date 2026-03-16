@@ -1,3 +1,5 @@
+    @use './../../../Styles/index.scss' as *;
+
     .user-resumes__recent-resumes {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -6,6 +8,19 @@
         align-items: stretch;
         overflow: hidden;
         cursor: pointer;
+
+        @include range(1150px, 1450px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include range(840px, 1150px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include range(600px, 840px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include range(0px, 600px){
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         &__card {
             width: 100%;
@@ -18,6 +33,7 @@
             flex-direction: column;
             background-color: var(--hover-color);
             position: relative;
+        
 
 
 
@@ -110,7 +126,7 @@
                         color: var(--white);
                     }
                 }
-                
+
                 button {
                     border-radius: 5px;
                     padding: var(--space-xs);

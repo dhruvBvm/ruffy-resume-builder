@@ -1,3 +1,4 @@
+    @use './../../../Styles/index.scss' as *;
 .dashboard__navbar {
     width: 100%;
     position: sticky;
@@ -43,6 +44,10 @@
         justify-content: center;
         align-items: center;
         gap: var(--space-sm);
+
+        @include mobile{
+            display: none;
+        }
 
 
         a {

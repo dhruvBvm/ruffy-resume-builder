@@ -1,8 +1,19 @@
+    @use './../../../Styles/index.scss' as *;
+
     .dashboard__sidebar {
         width: 200px;
         background-color: var(--secondary-bg);
         height: 100%;
         position: relative;
+
+        @include tablet {
+            width: 180px;
+        }
+
+        @include range(0px, 840px){
+            display: none;
+        }
+
 
         &__profile {
             padding: var(--space-xxs) var(--space-xs);
