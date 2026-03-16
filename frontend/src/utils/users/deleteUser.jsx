@@ -1,5 +1,5 @@
 export const deleteUser = async (id) => {
-  const result = await fetch(`http://localhost:3000/api/v1/user/${id}`, {
+  const result = await fetch(`https://ruffy-resume-builder.onrender.com/api/v1/user/${id}`, {
     method: "DELETE",   
   });
   const response = await result.json();

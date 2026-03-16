@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 
 dotenv.config();
+const PORT = process.env.PORT || 3000;
 
 mongoose
   .connect(
@@ -29,7 +30,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/v1", router);
-const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   req.cookies;

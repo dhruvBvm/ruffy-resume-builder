@@ -1,7 +1,7 @@
 import { fetchAuthorisedRoutes } from "../helpers/fetchAuthorisedRoutes";
 
 export const getUsersResumes = async () => {
-  let url = "http://localhost:3000/api/v1/user-resumes";
+  let url = "https://ruffy-resume-builder.onrender.com/api/v1/user-resumes";
   let options = {
     method: "GET",
     headers: {

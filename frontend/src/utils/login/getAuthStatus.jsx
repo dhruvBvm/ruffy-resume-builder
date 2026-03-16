@@ -1,7 +1,7 @@
 import { fetchAuthorisedRoutes } from "../helpers/fetchAuthorisedRoutes";
 
 export const getAuthStatus = async () => {
-  let url = "http://localhost:3000/api/v1/authStatus";
+  let url = "https://ruffy-resume-builder.onrender.com/api/v1/authStatus";
   let options = {
     method: "POST",
     headers: {
