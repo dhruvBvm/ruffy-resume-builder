@@ -12,18 +12,10 @@
     font-size: var(--font-lg);
     z-index: 1000000;
     background-color: var(--bg-color);
-    // padding: var(--space-lg);
-    // gap: var(--space-lg);
 
 
-    // @include mobile {
-    //     padding: var(--space-sm);
-    // }
 
-    // @include smallDevice {
-    //     display: none;
-    // }
-
+    
     &__left,
     &__right {
         width: 50%;
@@ -33,7 +25,6 @@
     }
 
     &__left {
-        background: #4ADE80;
         background: radial-gradient(circle at 10% 25%, rgba(74, 222, 128, .21) 1%, rgba(9, 9, 11, 1) 100%);
 
         @include tablet {
@@ -45,7 +36,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
+        
 
         &__wrapper {
             width: 55%;
@@ -56,8 +48,7 @@
             flex-direction: column;
 
             @include mobile {
-                width: 90%;
-                padding: var(--space-giant);
+                width: 96%;
             }
 
 
@@ -89,9 +80,10 @@
             @include mobile {
                 padding: var(--space-sm);
             }
-
+            
             @include smallDevice {
-                display: none;
+                width: 98%;
+               
             }
         }
     }

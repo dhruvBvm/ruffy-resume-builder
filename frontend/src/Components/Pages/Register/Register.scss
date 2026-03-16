@@ -5,13 +5,14 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     font-size: var(--font-lg);
     z-index: 1000000;
     background-color: var(--bg-color);
+    overflow: hidden;
 
 
     &__left,
@@ -32,22 +33,27 @@
     }
 
     &__left {
+        height: auto;
         display: flex;
         justify-content: center;
-        align-items: center;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
 
         &__wrapper {
             width: 75%;
+            height: auto;
             display: flex;
-            justify-content: center;
             align-items: left;
-            padding: var(--space-lg);
+            padding: var(--space-giant) var(--space-lg);
             flex-direction: column;
 
             @include mobile {
-                width: 90%;
-                padding: var(--space-giant);
+                width: 98%;
+                padding: var(--space-giant) var(--space-md);
             }
 
 
@@ -76,9 +82,6 @@
             }
 
 
-            @include mobile {
-                padding: var(--space-sm);
-            }
 
             @include smallDevice {
                 display: none;

@@ -6,7 +6,6 @@ import Button from "../../Molecules/Button/Button";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-// import { varifyLogin } from "../../../utils/login/varifyLogin";
 import { handleLoginFormChange } from "../../../utils/login/handleLoginFormChange";
 import { checkErrorStack } from "../../../utils/helpers/checkErrorStack";
 import { handleLogin } from "../../../utils/login/handleLogin";
