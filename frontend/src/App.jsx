@@ -13,13 +13,11 @@ import UserResumes from "./Components/Organism/UserResumes/UserResumes";
 import UserTemplates from "./Components/Organism/UserTemplates/UserTemplates";
 import DashboardInfo from "./Components/Organism/DashboardInfo/DashboardInfo";
 import ViewResume from "./Components/Pages/ViewResume/ViewResume";
-import PDF from "./Components/Organism/PDF/PDF.JSX";
 import AllResumes from "./Components/Organism/AllResumes/AllResumes";
 import { createContext, useEffect, useReducer } from "react";
 import { reducer } from "./State/reducers";
 import { initialState } from "./State/initialState";
 import { getAuthStatus } from "./utils/login/getAuthStatus";
-import UsersList from "./Components/Organism/UsersList/UsersList";
 import AdminUsers from "./Components/Organism/AdminUsers/AdminUsers";
 
 export const AppContext = createContext();
@@ -143,7 +141,7 @@ function App() {
               <Route path="resumes" element={<AllResumes />} />
               <Route path="users-list" element={<AdminUsers />} />
             </Route>
-            <Route path="pdf" element={<PDF />} />
+            {/* <Route path="pdf" element={<PDF />} /> */}
           </Routes>
         </BrowserRouter>
       </AppContext>
