@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 import { AppContext } from "../../../App";
-import TemplateOneImage from "../../../Assests/Images/TemplateOneImage.jpg";
+import TemplateOneImage from "./../../../Assests/Images/templateOneImage.jpg";
 import Button from "../../Molecules/Button/Button";
 import { deleteResume } from "../../../utils/resumes/deleteResume";
 import { editResume } from "../../../utils/resumes/editResume";
