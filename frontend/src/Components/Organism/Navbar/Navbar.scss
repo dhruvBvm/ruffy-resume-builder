@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 200;
     background-color: var(--bg-color);
     height: 8vh;
 
@@ -47,6 +47,7 @@
 
 
         button {
+            z-index: 150;
             @include mobile {
                 font-size: var(--font-xxs);
                 padding: 4px var(--space-xs);
