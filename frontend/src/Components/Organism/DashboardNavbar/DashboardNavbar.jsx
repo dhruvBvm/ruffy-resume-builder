@@ -5,6 +5,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { RiDashboard3Line } from "react-icons/ri";
 import { AppContext } from "../../../App";
 
+import { RxHamburgerMenu } from "react-icons/rx";
+
 const DashboardNavbar = () => {
   const { state } = useContext(AppContext);
   return (
@@ -13,8 +15,9 @@ const DashboardNavbar = () => {
         <div className="icon">
           <RiDashboard3Line />
         </div>
-
-        <div className="dashboard__navbar__active__page">Dashboard</div>
+        <div className="icon__hamburger">
+          <RxHamburgerMenu/>
+        </div>
       </div>
 
       <div className="dashboard__navbar__links">

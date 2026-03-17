@@ -1,11 +1,27 @@
+@use './../../../Styles/index.scss' as *;
+
 .users-table {
     width: 100%;
     overflow-y: auto;
     margin: var(--space-lg) 0;
 
-    h2{
+    @include tablet {
+        margin: var(--space-sm) 0;
+
+
+    }
+
+    h2 {
         font-size: var(--font-xl);
         padding: var(--space-md) 0;
+
+        @include tablet {
+            font-size: var(--font-md);
+        }
+
+        @include mobile {
+            font-size: var(--font-sm);
+        }
     }
 
     table {
@@ -24,6 +40,17 @@
         text-align: center;
         flex: 1;
         backdrop-filter: blur(50px);
+        white-space: nowrap;
+
+        @include tablet {
+            padding: var(--space-xs) var(--space-md);
+            font-size: var(--font-xs);
+        }
+
+        @include mobile {
+            padding: var(--space-xxs) var(--space-md);
+            font-size: var(--font-xxs);
+        }
     }
 
     td {
@@ -31,6 +58,16 @@
         padding: var(--space-xs) var(--space-lg);
         text-align: center;
         text-transform: capitalize;
+
+        @include tablet {
+            padding: var(--space-xxs) var(--space-md);
+            font-size: var(--font-xs);
+        }
+
+        @include mobile {
+            padding: var(--space-tiny) var(--space-md);
+            font-size: var(--font-xxs);
+        }
     }
 
     tbody {

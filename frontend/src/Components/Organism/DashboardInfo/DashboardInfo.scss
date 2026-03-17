@@ -1,81 +1,190 @@
-.dashboard__info {
-    width: 100%;
+    @use './../../../Styles/index.scss' as *;
 
-    &__header {
-        font-size: var(--font-xl);
-        // margin-top: var(--space-xxl);
-    }
 
-    &__intro {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: var(--space-xxl);
+    .dashboard__info {
+        width: 100%;
 
-        h1 {
-            font-size: var(--font-xxl);
+        &__header {
+            font-size: var(--font-xl);
+            // margin-top: var(--space-xxl);
         }
 
-        p {
-            font-size: var(--font-md);
-        }
-
-        .actions {
+        &__intro {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: var(--space-sm);
+            margin-bottom: var(--space-xxl);
+            gap: var(--space-md);
 
-            button:nth-child(2) {
-                background-color: var(--secondary-bg);
-                color: var(--white);
-                border: 1px solid var(--border);
+            @include tablet {
+                align-items: flex-start;
+            }
+
+            @include range(0, 680px) {
+                flex-direction: column
+            }
+
+            h1 {
+                font-size: var(--font-xxl);
+
+                @include tablet {
+                    font-size: var(--font-xl);
+                }
+
+                @include range(0, 480px) {
+                    font-size: var(--font-lg);
+                }
+            }
+
+            p {
+                font-size: var(--font-md);
+
+                @include range(0, 480px) {
+                    font-size: var(--font-sm);
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: var(--space-sm);
+
+                @include range(0, 480px) {
+                    flex-direction: column;
+                    align-items: stretch
+                }
+
+                button {
+                    @include tablet {
+                        font-size: var(--font-xs);
+                    }
+
+                    @include range(0, 480px) {
+                        flex: 1;
+                    }
+
+                }
+
+                button:nth-child(2) {
+                    background-color: var(--secondary-bg);
+                    color: var(--white);
+                    border: 1px solid var(--border);
+                }
             }
         }
-    }
 
-    &__stats-cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        padding: var(--space-lg) 0;
-        gap: var(--space-lg);
-        align-items: stretch;
-        overflow: hidden;
+        &__stats-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: var(--space-lg) 0;
+            gap: var(--space-lg);
+            align-items: stretch;
+            overflow: hidden;
 
-        &__card {
-            width: 100%;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: var(--space-lg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-xxl);
-            background-color: var(--hover-color);
+            @include range(1100px, 1500px) {
+                padding: var(--space-md) 0;
+                gap: var(--space-sm);
+            }
 
-            .icon {
-                font-size: var(--space-giant);
+            @include tablet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include range(0px, 850px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-sm);
+            }
+
+
+
+            &__card {
+                width: 100%;
+                border: 1px solid var(--border);
+                border-radius: 10px;
                 padding: var(--space-lg);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #4ade8042;
-                border-radius: 50%;
-            }
+                gap: var(--space-xxl);
+                background-color: var(--hover-color);
 
-            .stats {
-                display: flex;
-                flex-direction: column;
-
-                h2 {
-                    font-size: var(--font-giant);
+                @include range(1100px, 1500px) {
+                    padding: var(--space-sm);
+                    gap: var(--space-sm);
                 }
 
-                p {
-                    font-size: var(--font-lg);
+                @include range(0px, 850px) {
+                    padding: var(--space-xxs);
+                    gap: var(--space-sm);
+                }
+
+
+
+                @include tablet {
+                    padding: var(--space-sm);
+                    gap: var(--space-sm);
+                }
+
+
+
+
+
+                .icon {
+                    font-size: var(--space-huge);
+                    padding: var(--space-md);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #4ade8042;
+                    border-radius: 50%;
+
+                    @include range(1100px, 1500px) {
+                        font-size: var(--space-xl);
+                        padding: var(--space-sm);
+                        justify-content: space-between;
+                    }
+
+                    @include range(0px, 650px) {
+                        font-size: var(--space-md);
+                    }
+                }
+
+                .stats {
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        font-size: var(--font-giant);
+
+                        @include range(1100px, 1500px) {
+                            font-size: var(--font-xxl);
+                        }
+
+                        @include range(850px, 1100px) {
+                            font-size: var(--font-xl);
+                        }
+
+
+                        @include range(0px, 650px) {
+                            font-size: var(--font-lg);
+                        }
+
+                    }
+
+                    p {
+                        font-size: var(--font-lg);
+
+                        @include range(800px, 1500px) {
+                            font-size: var(--font-sm);
+                        }
+
+                        @include range(0px, 850px) {
+                            font-size: var(--font-xs);
+                        }
+                    }
                 }
             }
         }
-    }
 
-}
+    }

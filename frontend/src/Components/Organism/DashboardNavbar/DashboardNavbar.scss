@@ -1,81 +1,96 @@
     @use './../../../Styles/index.scss' as *;
-.dashboard__navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    flex-shrink: 0;
-    border-bottom: 1px solid var(--border);
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-xxs) var(--space-lg);
-    z-index: 15;
 
-    .icon {
+    .dashboard__navbar {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        flex-shrink: 0;
+        border-bottom: 1px solid var(--border);
+        background-color: var(--bg-color);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: var(--space-sm);
-        cursor: pointer;
-        transition: all .2s ease-in-out;
-        font-size: var(--font-xl);
+        padding: var(--space-xxs) var(--space-lg);
+        z-index: 15;
 
-        &:hover {
-            background-color: var(--hover-color);
-        }
-    }
-
-    &__active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: var(--space-md);
-
-        &__page {
-            padding-left: var(--space-lg);
-            border-left: 1px solid var(--border);
-        }
-    }
-
-    &__links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: var(--space-sm);
-
-        @include mobile{
-            display: none;
-        }
-
-
-        a {
-            font-size: var(--font-sm);
-            transition: all .5s ease-in-out;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-sm);
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            font-size: var(--font-xl);
 
             &:hover {
-                opacity: .7;
-                text-decoration: underline;
+                background-color: var(--hover-color);
+            }
+        }
+
+        &__active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-md);
+
+            &__page {
+                padding-left: var(--space-lg);
+                border-left: 1px solid var(--border);
+            }
+
+            .icon {
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            .icon__hamburger {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
+            }
+        }
+
+        &__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-sm);
+
+            @include mobile {
+                display: none;
+            }
+
+
+            a {
+                font-size: var(--font-sm);
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    opacity: .7;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__accounts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-sm);
+
+            span {
+                font-size: var(--font-md);
+            }
+
+            .icon {
+                font-size: var(--font-xxs);
+                border: 1px solid var(--border);
+                padding: var(--space-sm);
+                border-radius: 50%;
             }
         }
     }
-
-    &__accounts {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: var(--space-sm);
-
-        span{
-            font-size: var(--font-md);
-        }
-
-        .icon{
-            font-size: var(--font-xxs);
-            border: 1px solid var(--border);
-            padding: var(--space-sm);
-            border-radius: 50%;
-        }
-    }
-}
