@@ -167,7 +167,7 @@
 
 
                         @include range(0px, 650px) {
-                            font-size: var(--font-lg);
+                            font-size: var(--font-sm);
                         }
 
                     }
@@ -179,8 +179,11 @@
                             font-size: var(--font-sm);
                         }
 
-                        @include range(0px, 850px) {
+                        @include range(450px, 850px) {
                             font-size: var(--font-xs);
+                        }
+                        @include range(0px, 450px) {
+                            font-size: var(--font-xxs);
                         }
                     }
                 }
