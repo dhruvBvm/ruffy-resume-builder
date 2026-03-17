@@ -11,6 +11,8 @@
         }
 
         @include range(0px, 950px){
+            width: 100%;
+            transform: translateY(-100%);
             display: none;
         }
 
